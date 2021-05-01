@@ -1,0 +1,1 @@
+# AASM state machine example
