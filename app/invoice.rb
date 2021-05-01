@@ -1,13 +1,7 @@
-class Invoice
+class Invoice < Sequel::Model
   include AASM
 
-  attr_reader :name
-
-  def initialize(name)
-    @name = name
-  end
-
-  aasm do
+  aasm column: :state do
     state :draft, initial: true
     state :unpaid
     state :sent
